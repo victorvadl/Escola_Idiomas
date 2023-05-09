@@ -1,6 +1,6 @@
-## Projeto Curso Idiomas
+## Projeto Escola de Idiomas
 
-Para este projeto, o curso de idiomas oferece cursos de francês e inglês para alunos de diferentes níveis de conhecimento. O curso está em constante expansão e precisa de um sistema que gerencie o cadastro dos alunos em cada curso.
+Para este projeto, uma escola de idiomas oferece cursos de francês e inglês para alunos de diferentes níveis de conhecimento. A escola está em constante expansão e precisa de um sistema que gerencie o cadastro dos alunos em cada curso.
 
 ## Proposta
 
