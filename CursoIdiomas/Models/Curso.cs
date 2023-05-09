@@ -31,12 +31,6 @@ namespace ExplorandoPropriedades.Models
             }
         }
 
-        public int ObterQuantidadeDeAlunosMatriculados()
-        {
-            int quantidade = Alunos.Count;
-            return quantidade;
-        }
-
         public bool RemoverAluno(Pessoa aluno)
         {
             return Alunos.Remove(aluno);
@@ -68,6 +62,12 @@ namespace ExplorandoPropriedades.Models
             {
                 Console.WriteLine($"{indicadorCurso+1} - Curso de {ListaDeCursos[indicadorCurso].Nome}.");
             }
+        }
+
+        public int ObterQuantidadeDeAlunosMatriculados()
+        {
+            int quantidade = Alunos.Count;
+            return quantidade;
         }
     }
 }
