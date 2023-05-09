@@ -13,10 +13,11 @@ namespace ExplorandoPropriedades.Models
 
         }
 
-        public Pessoa(string nome, string sobrenome)
+        public Pessoa(string nome, string sobrenome, int idade)
         {
             Nome = nome;
             Sobrenome = sobrenome;
+            Idade = idade;
         }
 
 
