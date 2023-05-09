@@ -37,7 +37,8 @@ while (exibirMenu)
   Console.WriteLine("1 - Cadastrar aluno");
   Console.WriteLine("2 - Listar alunos do curso");
   Console.WriteLine("3 - Remover aluno");
-  Console.WriteLine("4 - Encerrar");
+  Console.WriteLine("4 - Total de alunos");
+  Console.WriteLine("5 - Encerrar");
 
   switch (Console.ReadLine())
   {
@@ -48,7 +49,9 @@ while (exibirMenu)
       string nome = Console.ReadLine();
       Console.WriteLine("Qual o sobrenome do aluno?");
       string sobrenome = Console.ReadLine();
-      Pessoa p1 = new Pessoa(nome, sobrenome);
+      Console.WriteLine("Quantos anos o aluno possui?");
+      int idade = Convert.ToInt32(Console.ReadLine());
+      Pessoa p1 = new Pessoa(nome, sobrenome, idade);
       Console.Clear();
       bool opcaoInvalida = true;
 
@@ -187,6 +190,23 @@ while (exibirMenu)
       break;
 
     case "4":
+      Console.Clear();
+      int totalAlunos = cursoDeFrances.ObterQuantidadeDeAlunosMatriculados() + cursoDeIngles.ObterQuantidadeDeAlunosMatriculados();
+      if (totalAlunos == 0)
+      {
+        Console.WriteLine("O curso de idiomas não possui aluno matriculado");
+      }
+      else if (totalAlunos == 1)
+      {
+      Console.WriteLine($"O curso de idiomas possui um total de {totalAlunos} aluno matriculados.");
+      }
+      else
+      {
+        Console.WriteLine($"O curso de idiomas possui um total de {totalAlunos} alunos matriculados.");
+      }
+      break;
+
+    case "5":
       exibirMenu = false;
       break;
 
