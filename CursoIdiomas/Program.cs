@@ -125,7 +125,12 @@ while (exibirMenu)
           Console.Clear();
           cursoDeIngles.ListarAlunos();
           Console.WriteLine("Digite o nome completo do aluno que deseja remover");
+          Console.WriteLine("Digite 'cancelar' para voltar ao menu anterior.");
           string nome_aluno = Console.ReadLine();
+          if (nome_aluno.ToLower() == "cancelar")
+            {
+                break;
+            }
           Pessoa aluno = cursoDeIngles.Alunos.FirstOrDefault( a=> a.NomeCompleto == nome_aluno.ToUpper());
           while (aluno == null)
           {
@@ -133,7 +138,7 @@ while (exibirMenu)
             Console.WriteLine($"Não foi encontrado um aluno com o nome {nome_aluno} no curso de Inglês.");
             Console.WriteLine("Os alunos matriculados no curso de Ingês são:");
             cursoDeIngles.ListarAlunos();
-            Console.WriteLine("Digite novamente o nome do aluno que você deseja remover. \nDigite 'cancelar' para voltar.");
+            Console.WriteLine("Digite novamente o nome do aluno que você deseja remover. \nDigite 'cancelar' para voltar ao menu anterior.");
             nome_aluno = Console.ReadLine();
             if (nome_aluno.ToLower() == "cancelar")
             {
@@ -158,8 +163,13 @@ while (exibirMenu)
           }
           Console.Clear();
           cursoDeFrances.ListarAlunos();
-          Console.WriteLine("Digite o nome completo do aluno que deseja remover");
+          Console.WriteLine("Digite o nome completo do aluno que deseja remover.");
+          Console.WriteLine("Digite 'cancelar' para voltar ao menu anterior.");
           nome_aluno = Console.ReadLine();
+          if (nome_aluno.ToLower() == "cancelar")
+            {
+                break;
+            }
           aluno = cursoDeFrances.Alunos.FirstOrDefault( a=> a.NomeCompleto == nome_aluno.ToUpper());
           while (aluno == null)
           {
@@ -167,7 +177,7 @@ while (exibirMenu)
             Console.WriteLine($"Não foi encontrado um aluno com o nome {nome_aluno} no curso de Francês.");
             Console.WriteLine("Os alunos matriculados no curso de Francês são:");
             cursoDeFrances.ListarAlunos();
-            Console.WriteLine("Digite novamente o nome do aluno que você deseja remover. \nDigite 'cancelar' para voltar.");
+            Console.WriteLine("Digite novamente o nome do aluno que você deseja remover. \nDigite 'cancelar' para voltar ao menu anterior.");
             nome_aluno = Console.ReadLine();
             if (nome_aluno.ToLower() == "cancelar")
             {
@@ -194,15 +204,15 @@ while (exibirMenu)
       int totalAlunos = cursoDeFrances.ObterQuantidadeDeAlunosMatriculados() + cursoDeIngles.ObterQuantidadeDeAlunosMatriculados();
       if (totalAlunos == 0)
       {
-        Console.WriteLine("O curso de idiomas não possui aluno matriculado");
+        Console.WriteLine("A escola de idiomas não possui aluno matriculado");
       }
       else if (totalAlunos == 1)
       {
-      Console.WriteLine($"O curso de idiomas possui um total de {totalAlunos} aluno matriculados.");
+      Console.WriteLine($"A escola de idiomas possui um total de {totalAlunos} aluno matriculados.");
       }
       else
       {
-        Console.WriteLine($"O curso de idiomas possui um total de {totalAlunos} alunos matriculados.");
+        Console.WriteLine($"A escola de idiomas possui um total de {totalAlunos} alunos matriculados.");
       }
       break;
 
